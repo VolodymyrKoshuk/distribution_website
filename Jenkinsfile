@@ -11,7 +11,8 @@ pipeline {
 
     stage('Clone repository') {
             steps {
-                git 'git@github.com:VolodymyrKoshuk/distribution_website.git'
+                git credentialsId: 'github-ssh-key', url: 'git@github.com:VolodymyrKoshuk/distribution_website.git'
+
             }
         }
 
