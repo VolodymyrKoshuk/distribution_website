@@ -16,6 +16,14 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        script {
+          sh "git pull origin ${params.environment}"
+        }
+      }
+    }
+
     stage('Deploy to S3') {
       steps {
         script {
