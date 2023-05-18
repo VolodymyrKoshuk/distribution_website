@@ -37,7 +37,7 @@ pipeline {
         script {
           def distributionId = "E1KN5VEYEJLICQ"
 
-          sh "aws cloudfront create-invalidation --distribution-id ${distributionId} --paths /"
+          sh "aws cloudfront create-invalidation --distribution-id ${distributionId} --paths /index.html"
         }
       }
     }
