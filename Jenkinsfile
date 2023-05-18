@@ -9,14 +9,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        script {
-          sh "git checkout ${params.environment}"
-        }
-      }
-    }
-
     stage('Deploy to S3') {
       steps {
         script {
