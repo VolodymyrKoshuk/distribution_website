@@ -8,18 +8,17 @@ pipeline {
   }
 
   stages {
+
+    stage('Clone repository') {
+            steps {
+                git 'git@github.com:VolodymyrKoshuk/distribution_website.git'
+            }
+        }
+
     stage('Checkout') {
       steps {
         script {
           sh "git checkout ${params.environment}"
-        }
-      }
-    }
-
-    stage('Build') {
-      steps {
-        script {
-          sh "git pull origin ${params.environment}"
         }
       }
     }
