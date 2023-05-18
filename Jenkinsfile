@@ -9,13 +9,6 @@ pipeline {
 
   stages {
 
-    stage('Clone repository') {
-            steps {
-                git credentialsId: 'github-ssh-key', url: 'git@github.com:VolodymyrKoshuk/distribution_website.git'
-
-            }
-        }
-
     stage('Checkout') {
       steps {
         script {
