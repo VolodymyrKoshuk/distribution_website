@@ -35,7 +35,7 @@ pipeline {
     stage('Invalidate CloudFront Cache') {
       steps {
         script {
-          def distributionId = "<cloudfront_distribution_id>"
+          def distributionId = "E1KN5VEYEJLICQ"
 
           sh "aws cloudfront create-invalidation --distribution-id ${distributionId} --paths /*"
         }
